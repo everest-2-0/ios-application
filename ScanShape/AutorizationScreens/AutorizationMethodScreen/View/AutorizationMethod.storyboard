@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="52s-4c-Mk9">
+                                <rect key="frame" x="20" y="69" width="96" height="32.666666666666657"/>
+                                <color key="tintColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="&lt;-- Вернуться">
+                                            <attributes>
+                                                <color key="NSColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Inter-Regular"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5c-48-SQH">
+                                <rect key="frame" x="20" y="116.66666666666669" width="285" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D5c-48-SQH" secondAttribute="height" multiplier="241:86" id="61e-FS-hBD"/>
+                                    <constraint firstAttribute="width" secondItem="D5c-48-SQH" secondAttribute="height" multiplier="241:86" id="XIE-YM-J7g"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="ВЫБЕРИТЕ УДОБНЫЙ ДЛЯ ВАС СПОСОБ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Inter-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <real key="NSStrokeWidth" value="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3ci-dZ-yty">
+                                <rect key="frame" x="61.666666666666657" y="233.66666666666663" width="270" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="1uq-EV-7hf"/>
+                                    <constraint firstAttribute="width" constant="270" id="mOK-aT-9Jz"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zUr-Zi-BJu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bQy-sc-b1O">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aEk-Ac-98W">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KeyImage" translatesAutoresizingMaskIntoConstraints="NO" id="V4w-Ro-zus">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="BJb-yy-X2E"/>
+                                                        <constraint firstAttribute="width" constant="64" id="EqE-h7-Jkp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.21176470589999999" green="0.23921568630000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="V4w-Ro-zus" firstAttribute="centerY" secondItem="aEk-Ac-98W" secondAttribute="centerY" id="B99-8n-CCH"/>
+                                                <constraint firstItem="V4w-Ro-zus" firstAttribute="centerX" secondItem="aEk-Ac-98W" secondAttribute="centerX" id="Dnq-3E-C97"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.23921568630000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FUp-el-7UM">
+                                        <rect key="frame" x="142" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8yu-mi-DrG">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MailImage" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-Ij-Bi1">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="CRY-zx-aJI"/>
+                                                        <constraint firstAttribute="width" constant="64" id="Kv2-1g-S55"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="c3N-Ij-Bi1" firstAttribute="centerX" secondItem="8yu-mi-DrG" secondAttribute="centerX" id="2Y6-XG-XSG"/>
+                                                <constraint firstItem="c3N-Ij-Bi1" firstAttribute="centerY" secondItem="8yu-mi-DrG" secondAttribute="centerY" id="V4N-0m-bwH"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mvq-a8-U5m">
+                                        <rect key="frame" x="0.0" y="138" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5py-pR-wVv">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TelegramImage" translatesAutoresizingMaskIntoConstraints="NO" id="HDQ-gt-jtt">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="Ag1-Gc-XpQ"/>
+                                                        <constraint firstAttribute="width" constant="64" id="bD1-9c-Syw"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="HDQ-gt-jtt" firstAttribute="centerY" secondItem="5py-pR-wVv" secondAttribute="centerY" id="JlK-Ys-tMO"/>
+                                                <constraint firstItem="HDQ-gt-jtt" firstAttribute="centerX" secondItem="5py-pR-wVv" secondAttribute="centerX" id="Z4w-eV-wwo"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wK0-O4-lsW">
+                                        <rect key="frame" x="142" y="138" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2D7-uc-Kc2">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsAppImage" translatesAutoresizingMaskIntoConstraints="NO" id="hZm-Lw-plb">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="Q22-gs-kfK"/>
+                                                        <constraint firstAttribute="width" constant="64" id="o87-po-yiz"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="hZm-Lw-plb" firstAttribute="centerX" secondItem="2D7-uc-Kc2" secondAttribute="centerX" id="gun-iI-wvx"/>
+                                                <constraint firstItem="hZm-Lw-plb" firstAttribute="centerY" secondItem="2D7-uc-Kc2" secondAttribute="centerY" id="pRm-CC-wCi"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a9V-D3-JDh">
+                                        <rect key="frame" x="0.0" y="276" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MgF-57-Kbf">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VKImage" translatesAutoresizingMaskIntoConstraints="NO" id="Gj6-xJ-MjJ">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="fQp-YT-J9R"/>
+                                                        <constraint firstAttribute="width" constant="64" id="s19-LB-tvg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Gj6-xJ-MjJ" firstAttribute="centerY" secondItem="MgF-57-Kbf" secondAttribute="centerY" id="3R3-f0-V16"/>
+                                                <constraint firstItem="Gj6-xJ-MjJ" firstAttribute="centerX" secondItem="MgF-57-Kbf" secondAttribute="centerX" id="Pj3-X2-NOl"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3nd-jv-GKb">
+                                        <rect key="frame" x="142" y="276" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="36I-gd-SZQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OkImage" translatesAutoresizingMaskIntoConstraints="NO" id="87N-Cw-vOr">
+                                                    <rect key="frame" x="32" y="32" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="EMl-Th-DP2"/>
+                                                        <constraint firstAttribute="height" constant="64" id="vMa-te-59f"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="87N-Cw-vOr" firstAttribute="centerY" secondItem="36I-gd-SZQ" secondAttribute="centerY" id="idd-fr-BHc"/>
+                                                <constraint firstItem="87N-Cw-vOr" firstAttribute="centerX" secondItem="36I-gd-SZQ" secondAttribute="centerX" id="uaa-hV-fy4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="D5c-48-SQH" firstAttribute="top" secondItem="52s-4c-Mk9" secondAttribute="bottom" constant="15" id="57H-Zk-z6w"/>
+                            <constraint firstItem="3ci-dZ-yty" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Lek-pe-fXN"/>
+                            <constraint firstItem="52s-4c-Mk9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Vul-ER-a1z"/>
+                            <constraint firstItem="52s-4c-Mk9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="XHQ-Ya-XSZ"/>
+                            <constraint firstItem="3ci-dZ-yty" firstAttribute="top" secondItem="D5c-48-SQH" secondAttribute="bottom" constant="15" id="XUw-Uy-68K"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="D5c-48-SQH" secondAttribute="trailing" constant="88" id="hUF-b0-FTT"/>
+                            <constraint firstItem="D5c-48-SQH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="i1v-pv-dY8"/>
+                            <constraint firstItem="3ci-dZ-yty" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="qMi-2z-4K5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="KeyImage" width="54" height="54"/>
+        <image name="MailImage" width="64" height="48"/>
+        <image name="OkImage" width="40" height="64"/>
+        <image name="TelegramImage" width="56" height="47"/>
+        <image name="VKImage" width="60" height="36"/>
+        <image name="WhatsAppImage" width="56" height="56"/>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

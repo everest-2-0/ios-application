@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="mEK-v1-e6t">
+            <objects>
+                <viewController id="mGL-Ta-Gwr" customClass="LoginViewController" customModule="ScanShape" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dsX-W3-F8r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgC-sw-3x3">
+                                <rect key="frame" x="20" y="197.66666666666663" width="353" height="422"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8tk-5S-N66">
+                                        <rect key="frame" x="4" y="0.0" width="269" height="95.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8tk-5S-N66" secondAttribute="height" multiplier="241:86" id="ARZ-Iy-f6V"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="ВОССТАНОВИТЕ ДОСТУП К АККАУНТУ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="24" name="Inter-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajw-0Y-2zk">
+                                        <rect key="frame" x="4" y="97.666666666666657" width="339" height="29"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Использовать другой способ --&gt;">
+                                                    <attributes>
+                                                        <font key="NSFont" size="14" name="Inter-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIk-gv-0ov" userLabel="LoginTextFieldContainer">
+                                        <rect key="frame" x="4" y="146.66666666666666" width="345" height="56"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Телефон" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-Qc-1aY">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="56"/>
+                                                <color key="backgroundColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="nk8-Qc-1aY" secondAttribute="bottom" id="HUG-8i-0x3"/>
+                                            <constraint firstAttribute="trailing" secondItem="nk8-Qc-1aY" secondAttribute="trailing" id="O3E-Jv-Stk"/>
+                                            <constraint firstAttribute="height" constant="56" id="ONO-Ge-FCx"/>
+                                            <constraint firstItem="nk8-Qc-1aY" firstAttribute="leading" secondItem="LIk-gv-0ov" secondAttribute="leading" id="qvR-Ot-8C1"/>
+                                            <constraint firstItem="nk8-Qc-1aY" firstAttribute="top" secondItem="LIk-gv-0ov" secondAttribute="top" id="vRJ-bl-Ggj"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-og-tZc">
+                                        <rect key="frame" x="4" y="222.66666666666666" width="345" height="34.999999999999972"/>
+                                        <color key="tintColor" red="0.1647058824" green="0.20000000000000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="PGj-ds-K6E"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="На указанный Вами телефон, придёт SMS c необходимым для подтверждения кодом.">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="Inter-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LIk-gv-0ov" firstAttribute="top" secondItem="ajw-0Y-2zk" secondAttribute="bottom" constant="20" id="5oM-Z9-QmQ"/>
+                                    <constraint firstItem="ajw-0Y-2zk" firstAttribute="top" secondItem="8tk-5S-N66" secondAttribute="bottom" constant="2" id="EZN-sG-OnW"/>
+                                    <constraint firstAttribute="width" secondItem="TgC-sw-3x3" secondAttribute="height" multiplier="353:422" id="WyG-jP-eeY"/>
+                                    <constraint firstItem="LIk-gv-0ov" firstAttribute="leading" secondItem="TgC-sw-3x3" secondAttribute="leading" constant="4" id="cQ5-Ua-Om0"/>
+                                    <constraint firstItem="KGs-og-tZc" firstAttribute="leading" secondItem="TgC-sw-3x3" secondAttribute="leading" constant="4" id="efl-4K-ZK2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ajw-0Y-2zk" secondAttribute="trailing" constant="10" id="iEs-wY-Paw"/>
+                                    <constraint firstAttribute="trailing" secondItem="KGs-og-tZc" secondAttribute="trailing" constant="4" id="icB-wE-84j"/>
+                                    <constraint firstItem="ajw-0Y-2zk" firstAttribute="leading" secondItem="TgC-sw-3x3" secondAttribute="leading" constant="4" id="kND-pV-rY6"/>
+                                    <constraint firstAttribute="trailing" secondItem="LIk-gv-0ov" secondAttribute="trailing" constant="4" id="pWO-iJ-yCc"/>
+                                    <constraint firstItem="8tk-5S-N66" firstAttribute="leading" secondItem="TgC-sw-3x3" secondAttribute="leading" constant="4" id="scq-Ta-6zj"/>
+                                    <constraint firstAttribute="trailing" secondItem="8tk-5S-N66" secondAttribute="trailing" constant="80" id="t3P-fr-2vh"/>
+                                    <constraint firstItem="KGs-og-tZc" firstAttribute="top" secondItem="LIk-gv-0ov" secondAttribute="bottom" constant="20" id="ycB-rl-Ogl"/>
+                                    <constraint firstItem="8tk-5S-N66" firstAttribute="top" secondItem="TgC-sw-3x3" secondAttribute="top" id="zwh-Nb-LUU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iut-K7-SST">
+                                <rect key="frame" x="64" y="778.33333333333337" width="265" height="29.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlR-Vu-hUY">
+                                        <rect key="frame" x="0.0" y="6.3333333333332575" width="128" height="17"/>
+                                        <color key="tintColor" white="1" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Еще нет аккаунта?">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="14" name="Inter-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ies-GP-k7p">
+                                        <rect key="frame" x="130" y="0.33333333333325754" width="135" height="29"/>
+                                        <color key="tintColor" red="0.21176470589999999" green="0.23921568630000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Зарегистрируйтесь">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.21176470588235294" green="0.23921568627450979" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="14" name="Inter-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ies-GP-k7p" firstAttribute="leading" secondItem="TlR-Vu-hUY" secondAttribute="trailing" constant="2" id="46O-7G-vTY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ies-GP-k7p" secondAttribute="trailing" id="ErM-Io-j37"/>
+                                    <constraint firstItem="TlR-Vu-hUY" firstAttribute="centerY" secondItem="Iut-K7-SST" secondAttribute="centerY" id="Eul-zy-BWa"/>
+                                    <constraint firstAttribute="width" secondItem="Iut-K7-SST" secondAttribute="height" multiplier="152:17" id="New-yQ-zEi"/>
+                                    <constraint firstItem="TlR-Vu-hUY" firstAttribute="leading" secondItem="Iut-K7-SST" secondAttribute="leading" id="juE-zO-xuJ"/>
+                                    <constraint firstItem="Ies-GP-k7p" firstAttribute="centerY" secondItem="Iut-K7-SST" secondAttribute="centerY" id="q3q-7a-vgY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ty-Kn-E4c">
+                                <rect key="frame" x="20" y="707.33333333333337" width="353" height="56"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.23921568630000001" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9F4-Q5-zhR"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Отправить код">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="20" name="Inter-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KjA-3D-Mfo"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TgC-sw-3x3" firstAttribute="centerY" secondItem="KjA-3D-Mfo" secondAttribute="centerY" constant="-30" id="4ad-Vg-a8e"/>
+                            <constraint firstItem="8ty-Kn-E4c" firstAttribute="leading" secondItem="KjA-3D-Mfo" secondAttribute="leading" constant="20" id="8YS-qE-HBT"/>
+                            <constraint firstItem="Iut-K7-SST" firstAttribute="centerX" secondItem="KjA-3D-Mfo" secondAttribute="centerX" id="Agx-Gy-CyY"/>
+                            <constraint firstItem="KjA-3D-Mfo" firstAttribute="bottom" secondItem="Iut-K7-SST" secondAttribute="bottom" constant="10" id="MzM-Wn-xwn"/>
+                            <constraint firstItem="TgC-sw-3x3" firstAttribute="centerX" secondItem="KjA-3D-Mfo" secondAttribute="centerX" id="Px4-U2-Y91"/>
+                            <constraint firstItem="KjA-3D-Mfo" firstAttribute="trailing" secondItem="TgC-sw-3x3" secondAttribute="trailing" constant="20" id="Qi1-3w-4ds"/>
+                            <constraint firstItem="Iut-K7-SST" firstAttribute="top" secondItem="8ty-Kn-E4c" secondAttribute="bottom" constant="15" id="aii-BA-ePG"/>
+                            <constraint firstItem="KjA-3D-Mfo" firstAttribute="trailing" secondItem="8ty-Kn-E4c" secondAttribute="trailing" constant="20" id="ja6-iX-iog"/>
+                            <constraint firstItem="TgC-sw-3x3" firstAttribute="leading" secondItem="KjA-3D-Mfo" secondAttribute="leading" constant="20" id="uaF-li-eH8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gm-DM-Ux3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
