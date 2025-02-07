@@ -14,7 +14,7 @@ final class NetworkManager{
     private init() {}
     
     func loginToAccount(number: String, password: String, completion: @escaping (Result<String, AFError>) -> Void){
-        let url = "http://95.164.69.181:8080/api/users/login"
+        let url = "http://195.161.69.122:8080/api/users/login"
         let parameters: [String: Any] = [
             "number": number,
             "password": password
@@ -36,7 +36,7 @@ final class NetworkManager{
     }
     
     func register(name: String, number: String, password: String, gender: String, completion: @escaping (Result<String, AFError>) -> Void){
-        let url = "http://95.164.69.181:8080/api/users/register"
+        let url = "http://195.161.69.122:8080/api/users/register"
         let parameters: [String: Any] = [
             "name": name,
             "number": number,
