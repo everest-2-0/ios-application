@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var anotherMethodButton: UIButton!
     @IBOutlet weak var loginTextField: UITextField!
@@ -18,15 +18,30 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var eyeImageView: UIImageView!
     @IBOutlet weak var changePasswordButton: UIButton!
     
+    let networkManager = NetworkManager.shared
+    var gwtToket: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
+        
         configureCreateButton()
         configureLoginTextField()
         configurePasswordTextField()
         configureChangePasswordButton()
+        configureEyeImageView()
     }
     
-
+    private func configureEyeImageView() {
+        eyeImageView.isUserInteractionEnabled = true
+        eyeImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(eyeImageTapped)))
+    }
+    
+    @objc private func eyeImageTapped(){
+        passwordTextField.isSecureTextEntry.toggle()
+    }
     
     private func configureChangePasswordButton(){
         let attributedString = NSAttributedString(
@@ -72,5 +87,37 @@ class LoginViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func loginButtonTapped(_ sender: Any){
+        loginToApplication(number: loginTextField.text ?? "", password: passwordTextField.text ?? "")
+    }
 }
 
+//MARK: - Network
+
+extension LoginViewController{
+    func loginToApplication(number: String, password: String){
+        networkManager.loginToAccount(number: number, password: password) { [weak self] result in
+            switch result{
+            case .success(let token):
+                self?.gwtToket = token
+                print("login completed")
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
+    }
+}
+
+//MARK: - Extension For Text Field
+
+extension LoginViewController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if let nextTextField = textField.next as? UITextField{
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+}

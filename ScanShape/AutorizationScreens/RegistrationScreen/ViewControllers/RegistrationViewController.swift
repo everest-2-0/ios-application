@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var anotherMethodButton: UIButton!
@@ -22,8 +22,16 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var eyeImageView: UIImageView!
     @IBOutlet weak var rulesLabel: UILabel!
     
+    let networkManager = NetworkManager.shared
+    var isAgreeWithRules = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.delegate = self
+        loginTextField.delegate = self
+        passwordTextField.delegate = self
+        
         configureCreateButton()
         configureSexButton()
         configureNameTextField()
@@ -31,6 +39,28 @@ class RegistrationViewController: UIViewController {
         configurePasswordTextField()
         configureRulesLabel()
         configureEyeImageView()
+        configureCheckboxImageView()
+    }
+    
+    private func dismissKeyboardByScreenTap(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        tapGesture.cancelsTouchesInView = false
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    private func configureCheckboxImageView(){
+        checkBoxImageView.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(checkboxTapped))
+        checkBoxImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func checkboxTapped(){
+        isAgreeWithRules = !isAgreeWithRules
+        checkBoxImageView.image = UIImage(named: (isAgreeWithRules ? "checkmarkActive" : "checkmarkNotActive"))
     }
     
     private func configureRulesLabel(){
@@ -112,6 +142,43 @@ class RegistrationViewController: UIViewController {
         let currentText = passwordTextField.text
         passwordTextField.isSecureTextEntry.toggle()
         passwordTextField.text = currentText
+    }
+    
+    @IBAction func registerButtonTapped() {
+        if isAgreeWithRules{
+            let gender = sexButton.titleLabel?.text == "М" ? "MALE" : "FEMALE"
+            let user = User(name: nameTextField.text ?? "", number: loginTextField.text ?? "", password: passwordTextField.text ?? "", gender: gender)
+            registerUser(name: user.name, number: user.number, password: user.password, gender: user.gender)
+        }
+    }
+}
 
+//MARK: - Network
+
+extension RegistrationViewController{
+    func registerUser(name: String, number: String, password: String, gender: String){
+        networkManager.register(name: name, number: number, password: password, gender: gender) { result in
+            switch result{
+            case .success(let token):
+                let loginVC = LoginViewController()
+                loginVC.gwtToket = token
+                print("register completed")
+            case .failure(let error):
+                print("error \(error)")
+            }
+        }
+    }
+}
+
+//MARK: - Extension For Text Field
+
+extension RegistrationViewController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if let nextTextField = textField.next as? UITextField{
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return false
     }
 }

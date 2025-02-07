@@ -18,7 +18,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		A53FFEFE2D51E28900737477 /* Exceptions for "ScanShape" folder in "ScanShape" target */ = {
+		A52A78C72D5526AC00BA66A1 /* Exceptions for "ScanShape" folder in "ScanShape" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -31,7 +31,7 @@
 		A53FFEEE2D51E28500737477 /* ScanShape */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				A53FFEFE2D51E28900737477 /* Exceptions for "ScanShape" folder in "ScanShape" target */,
+				A52A78C72D5526AC00BA66A1 /* Exceptions for "ScanShape" folder in "ScanShape" target */,
 			);
 			path = ScanShape;
 			sourceTree = "<group>";
